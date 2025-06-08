@@ -1,11 +1,11 @@
 # Analyse Polyphonique de Podcasts : Une Boîte à Outils pour la Recherche
 
-[cite_start]Ce projet contient le code source du pipeline d'analyse audio automatisée développé dans le cadre du mémoire de Master "Analyse de la mise en forme sonore du podcast ‘Tacapté’" (V. Ryelandt, IHECS, 2025).
+Ce projet contient le code source du pipeline d'analyse audio automatisée développé dans le cadre du mémoire de Master "Analyse de la mise en forme sonore du podcast ‘Tacapté’" (V. Ryelandt, IHECS, 2025).
 
-[cite_start]L'objectif de ce pipeline n'est pas de remplacer l'analyse qualitative humaine (*close listening*), qui reste au cœur de la méthodologie du mémoire, mais de servir d'outil d'exploration prospective pour :
-1.  [cite_start]Évaluer les capacités et les limites des modèles actuels (Whisper, Pyannote, YAMNet) sur un objet sonore complexe.
-2.  [cite_start]Documenter une méthode d'analyse polyphonique reproductible, en extrayant et croisant plusieurs couches d'information (parole, musique, bruitages, silences).
-3.  [cite_start]Fournir une base de données et de code transparente pour de futures recherches.
+L'objectif de ce pipeline n'est pas de remplacer l'analyse qualitative humaine (*close listening*), qui reste au cœur de la méthodologie du mémoire, mais de servir d'outil d'exploration prospective pour :
+1.  Évaluer les capacités et les limites des modèles actuels (Whisper, Pyannote, YAMNet) sur un objet sonore complexe.
+2.  Documenter une méthode d'analyse polyphonique reproductible, en extrayant et croisant plusieurs couches d'information (parole, musique, bruitages, silences).
+3.  Fournir une base de données et de code transparente pour de futures recherches.
 
 ## Fonctionnalités Principales
 
