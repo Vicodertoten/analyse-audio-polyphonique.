@@ -1,0 +1,25 @@
+# Fichier: requirements.txt
+# Liste des dépendances Python pour le projet d'analyse audio polyphonique.
+
+# --- Core Libraries ---
+pandas
+numpy
+matplotlib
+librosa
+
+# --- Machine Learning & Audio Processing ---
+openai-whisper
+pyannote.audio
+torch
+torchaudio
+tensorflow
+tqdm
+
+# --- Utilitaires ---
+python-dotenv
+XlsxWriter
+
+# NOTE IMPORTANTE : Dépendance Système
+# Ce projet requiert également FFMPEG, qui doit être installé sur le système
+# et accessible dans le PATH de l'environnement. Ce n'est pas une bibliothèque Python.
+# Voir : https://ffmpeg.org/download.html
