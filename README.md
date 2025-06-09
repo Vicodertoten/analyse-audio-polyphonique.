@@ -14,7 +14,7 @@ Le pipeline (`main.py`) automatise les tâches suivantes :
 * **Extraction de Caractéristiques :** Calcul du volume (RMS), du taux de passage par zéro (ZCR) et des MFCCs par seconde, avec un seuil de détection de silence adaptatif.
 * **Transcription :** Transcription intégrale de l'audio via le modèle `medium` de Whisper.
 * **Diarisation :** Identification des locuteurs avec `pyannote/speaker-diarization-3.1`, avec une distinction entre les segments de parole unique et les segments de parole superposée.
-* [cite_start]**Classification Sonore :** Identification multi-label d'événements sonores (Musique, Bruitages, etc.) via le modèle YAMNet.
+* **Classification Sonore :** Identification multi-label d'événements sonores (Musique, Bruitages, etc.) via le modèle YAMNet.
 * **Synthèse Polyphonique :** Création d'une timeline unifiée qui, pour chaque pas de temps, indique quels locuteurs parlent, quels sons sont présents et si le moment est silencieux.
 * **Calcul de Statistiques :** Génération de statistiques sur le temps de parole, le débit, et la dynamique d'interaction (*turn-taking*).
 * **Export Complet :** Sauvegarde de toutes les données et statistiques dans un fichier Excel multi-feuilles et génération de visualisations graphiques (timelines, histogrammes).
