@@ -1,4 +1,4 @@
-# Analyse Polyphonique de Podcasts : Une Boîte à Outils pour la Recherche
+# Analyse audio polyphonique : une boîte à outils pour la recherche
 
 Ce projet contient le code source du pipeline d'analyse audio automatisée développé dans le cadre du mémoire de Master "Analyse de la mise en forme sonore du podcast ‘Tacapté’" (V. Ryelandt, IHECS, 2025).
 
@@ -7,35 +7,35 @@ L'objectif de ce pipeline n'est pas de remplacer l'analyse qualitative humaine (
 2.  Documenter une méthode d'analyse polyphonique reproductible, en extrayant et croisant plusieurs couches d'information (parole, musique, bruitages, silences).
 3.  Fournir une base de données et de code transparente pour de futures recherches.
 
-## Fonctionnalités Principales
+## Fonctionnalités principales
 
 Le pipeline (`main.py`) automatise les tâches suivantes :
-* **Prétraitement Audio :** Conversion automatique des fichiers en format WAV mono 16kHz pour standardiser l'analyse.
-* **Extraction de Caractéristiques :** Calcul du volume (RMS), du taux de passage par zéro (ZCR) et des MFCCs par seconde, avec un seuil de détection de silence adaptatif.
+* **Prétraitement audio :** Conversion automatique des fichiers en format WAV mono 16kHz pour standardiser l'analyse.
+* **Extraction de caractéristiques :** Calcul du volume (RMS), du taux de passage par zéro (ZCR) et des MFCCs par seconde, avec un seuil de détection de silence adaptatif.
 * **Transcription :** Transcription intégrale de l'audio via le modèle `medium` de Whisper.
 * **Diarisation :** Identification des locuteurs avec `pyannote/speaker-diarization-3.1`, avec une distinction entre les segments de parole unique et les segments de parole superposée.
-* **Classification Sonore :** Identification multi-label d'événements sonores (Musique, Bruitages, etc.) via le modèle YAMNet.
-* **Synthèse Polyphonique :** Création d'une timeline unifiée qui, pour chaque pas de temps, indique quels locuteurs parlent, quels sons sont présents et si le moment est silencieux.
-* **Calcul de Statistiques :** Génération de statistiques sur le temps de parole, le débit, et la dynamique d'interaction (*turn-taking*).
-* **Export Complet :** Sauvegarde de toutes les données et statistiques dans un fichier Excel multi-feuilles et génération de visualisations graphiques (timelines, histogrammes).
+* **Classification sonore :** Identification multi-label d'événements sonores (Musique, Bruitages, etc.) via le modèle YAMNet.
+* **Synthèse polyphonique :** Création d'une timeline unifiée qui, pour chaque pas de temps, indique quels locuteurs parlent, quels sons sont présents et si le moment est silencieux.
+* **Calcul de statistiques :** Génération de statistiques sur le temps de parole, le débit, et la dynamique d'interaction (*turn-taking*).
+* **Export complet :** Sauvegarde de toutes les données et statistiques dans un fichier Excel multi-feuilles et génération de visualisations graphiques (timelines, histogrammes).
 
 ## Installation
 
-### 1. Prérequis Système
+### 1. Prérequis système
 * **Python (3.8 ou supérieur)**
 * **FFmpeg :** Cet outil est **essentiel** pour la conversion audio. Il doit être installé sur votre système et accessible depuis votre terminal. Instructions sur [ffmpeg.org](https://ffmpeg.org/download.html).
 
-### 2. Cloner le Dépôt
+### 2. Cloner le dépôt
 Clonez ce dépôt sur votre machine locale :
 ```bash
 git clone [https://github.com/votre-nom-utilisateur/memoire-analyse-sonore-2025.git](https://github.com/votre-nom-utilisateur/memoire-analyse-sonore-2025.git)
 cd memoire-analyse-sonore-2025
 ```
 
-### 3. Modèle YAMNet Local
+### 3. Modèle YAMNet local
 Ce projet utilise une implémentation locale du modèle YAMNet. Assurez-vous que le répertoire `yamnet/` contenant les fichiers du modèle est présent à la racine du projet, tel que fourni.
 
-### 4. Créer un Environnement Virtuel et Installer les Dépendances
+### 4. Créer un environnement virtuel et installer les dépendances
 Il est fortement recommandé d'utiliser un environnement virtuel.
 ```bash
 # Créer un environnement virtuel
@@ -51,7 +51,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 5. Configurer les Variables d'Environnement
+### 5. Configurer les variables d'environnement
 La diarisation via Pyannote nécessite une authentification auprès de Hugging Face.
 1.  Créez un fichier nommé `.env` à la racine du projet.
 2.  Ajoutez-y votre token d'accès Hugging Face :
@@ -76,7 +76,7 @@ python main.py
 # 🟢 Entrez le chemin du fichier audio : ...
 ```
 
-## Structure du Projet
+## Structure du projet
 
 ```
 .
